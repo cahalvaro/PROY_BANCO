@@ -13,5 +13,9 @@ class Conexion():
                             AUTOINCREMENT, nombre TEXT, usuario TEXT UNIQUE , clave TEXT)"""
         cur=self.con.cursor()
         cur.execute(sql_create_table1)
+        cur.close()
+        self.crearAdmin()
+        
 
-con=Conexion()
+
+
