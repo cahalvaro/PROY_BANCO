@@ -27,7 +27,7 @@
     <property name="title">
      <string>Archivo</string>
     </property>
-    <addaction name="btnRegistrar_Transferencias"/>
+    <addaction name="btnRegistrarTransferencias"/>
     <addaction name="btnReportar_Transferencia"/>
     <addaction name="btnHistorial_de_Transferencias"/>
    </widget>
@@ -46,9 +46,12 @@
     <string>Desarrolladores</string>
    </property>
   </action>
-  <action name="btnRegistrar_Transferencias">
+  <action name="btnRegistrarTransferencias">
    <property name="text">
     <string>Registrar Transferencias</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
   <action name="btnReportar_Transferencia">

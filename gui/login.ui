@@ -87,6 +87,9 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
+   <property name="text">
+    <string>admin</string>
+   </property>
    <property name="placeholderText">
     <string>Ingrese su usuario</string>
    </property>
@@ -104,6 +107,9 @@
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="text">
+    <string>admin2050.</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
