@@ -78,12 +78,37 @@
     </rect>
    </property>
    <property name="font">
-     <widget class="QLabel" name="label_4">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>***Seleccione una opcion</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>DNI-Documento Nacional de Identidad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PSS-Pasaporte</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VISA</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>320</x>
      <y>160</y>
-     <width>151</width>
+     <width>191</width>
      <height>21</height>
     </rect>
    </property>
@@ -93,31 +118,65 @@
     </font>
    </property>
    <property name="text">
-    <string>Tipo de Documento*</string>
+    <string>Número de documento*</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="btnBuscar">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>10</y>
-     <width>301</width>
-     <height>101</height>
+     <x>800</x>
+     <y>190</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 105, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;</string>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../logo.png</pixmap>
+    <string>Buscar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="txtDocumento">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>190</y>
-     <width>191</width>
+     <x>410</x>
+     <y>50</y>
+     <width>271</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Franklin Gothic Demi Cond</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 161, 174);</string>
+   </property>
+   <property name="text">
+    <string>Historial de Transferencias</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtFechaDesde">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>191</y>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -126,30 +185,73 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QComboBox" name="cbTipo">
+  <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>190</y>
-     <width>231</width>
-     <height>31</height>
+     <x>530</x>
+     <y>160</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
-<property name="text">
-    <string/>
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
-   <property name="pixmap">
-    <pixmap>../logo.png</pixmap>
+   <property name="text">
+    <string>Desde*</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="txtDocumento">
+  <widget class="QLabel" name="label_15">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>50</x>
+     <y>120</y>
+     <width>641</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Los campos con (*) son obligatorios</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>159</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Hasta*</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtFechaHasta">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
      <y>190</y>
-     <width>191</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -158,55 +260,46 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QComboBox" name="cbTipo">
+  <widget class="QTableWidget" name="tblHistorial">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>190</y>
-     <width>231</width>
-     <height>31</height>
+     <y>250</y>
+     <width>841</width>
+     <height>271</height>
     </rect>
    </property>
-   <property name="font">
-
-
-
-<property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../logo.png</pixmap>
-   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>NOMBRE COMPLETO</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>MONTO</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>REFERENCIA</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>VERIFICADO</string>
+    </property>
+   </column>
   </widget>
-  <widget class="QLineEdit" name="txtDocumento">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>190</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="cbTipo">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>190</y>
-     <width>231</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-
-
-
-
-
-
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
