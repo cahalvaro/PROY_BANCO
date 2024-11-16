@@ -28,8 +28,8 @@
      <string>Archivo</string>
     </property>
     <addaction name="btnRegistrarTransferencias"/>
-    <addaction name="btnReportar_Transferencia"/>
-    <addaction name="btnHistorial_de_Transferencias"/>
+    <addaction name="btnReportarTransferencia"/>
+    <addaction name="btnHistorialTransferencias"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -54,12 +54,12 @@
     <string>Ctrl+R</string>
    </property>
   </action>
-  <action name="btnReportar_Transferencia">
+  <action name="btnReportarTransferencia">
    <property name="text">
     <string>Reportar Transferencia</string>
    </property>
   </action>
-  <action name="btnHistorial_de_Transferencias">
+  <action name="btnHistorialTransferencias">
    <property name="text">
     <string>Historial de Transferencias</string>
    </property>

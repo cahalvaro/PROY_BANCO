@@ -1,6 +1,5 @@
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox
-
 from data.usuario import UsuarioData
 from gui.main import MainWindow
 from model.usuario import Usuario
@@ -21,16 +20,14 @@ class Login():
             self.login.txtClave.setFocus()
         else:
             self.login.lblMensaje.setText("")
-            usu = Usuario(usuario=self.login.txtUsuario.text(),clave=self.login.txtClave.text())
+            usu = Usuario(usuario=self.login.txtUsuario.text(), clave=self.login.txtClave.text())
             usuData = UsuarioData()
-            res=usuData.login(usu)
+            res = usuData.login(usu)
             if res:
                 self.main = MainWindow()
                 self.login.hide()
             else:
                 self.login.lblMensaje.setText("Datos de acceso incorrectos")
-            
-    
+
     def initGUI(self):
         self.login.btnAcceder.clicked.connect(self.ingresar)
-              
